@@ -30,4 +30,4 @@ $(document).ready(function(){
   
 
 // Js object of some colors
-var colors = ['#0074D9','#7FDBFF','#39CCCC','#FFDC00','#01FF70','#2ECC40','#3D9970','#FF851B','#FF4136','#85144b','#F012BE','#B10DC9'];
+var colors = ['#0074D9','#7FDBFF','#39CCCC','#FFDC00','#01FF70','#2ECC40','#3D9970','#FF851B','#FF4136','#85144b','#F012BE','#B10DC9', '#001f3f'];
