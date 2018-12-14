@@ -6,8 +6,14 @@
 */
 
 $(document).ready(function () {
-    var author, quote, color;
+    var author;
+    var quote;
+    var color;
     
+     /* A set of colors */
+    var colors = ['#0074D9', '#7FDBFF', '#39CCCC', '#FFDC00', '#01FF70', '#2ECC40',
+                  '#3D9970', '#FF851B', '#FF4136', '#85144b', '#F012BE', '#B10DC9'];
+
     $("#getQuotes").on("click", function () {
 
         var index = Math.floor(Math.random() * (colors.length));
@@ -22,23 +28,23 @@ $(document).ready(function () {
                 var html = "<h1> &ldquo; " + quote + "  &rdquo;</h1> <br>";
                 html += "<h3> --" + author + "</h3>";
                 $("#display").html(html);
-                $('body').css('background-color', color);
+                $("body").css("background-color", color);
 
 
             });
     });
 
-    $('#shareQuote').on('click', function () {
+    $("#shareQuote").on("click", function () {
         //$('span p').remove();
 
-        var textToTweet = '#TodayQuote  ' + quote + ' --' + author;
+        var textToTweet = "#TodayQuote  " + quote + " --" + author;
         console.log(textToTweet);
         if (textToTweet.length > 240) {
-            $('#failedTweet').removeClass('invisible');
+            $("#failedTweet").removeClass("invisible");
             
         } else {
-            var twtLink = 'https://twitter.com/home?status=' + encodeURIComponent(textToTweet);
-            window.open(twtLink, '_blank', "width=800, height=300");
+            var twtLink = "https://twitter.com/home?status=" + encodeURIComponent(textToTweet);
+            window.open(twtLink, "_blank", "width=800, height=300");
         }
     });
     
@@ -56,7 +62,3 @@ $(document).ready(function () {
 
             });
 });
-
-
-// Js object of some colors
-var colors = ['#0074D9', '#7FDBFF', '#39CCCC', '#FFDC00', '#01FF70', '#2ECC40', '#3D9970', '#FF851B', '#FF4136', '#85144b', '#F012BE', '#B10DC9'];
